@@ -1,0 +1,49 @@
+!!!5
+html(lang='zh')
+  head
+    meta(charset='utf-8')
+    title dribbble UI
+    :stylus
+      body
+        background transparent url('img/bg.png') repeat 0 0
+      .profile
+        position relative
+        background-color #2f363e
+        width 324px
+        border 1px solid black
+        border-radius 8px
+        height 440px
+        margin 80px auto
+        overflow hidden
+        .top
+          background-color #e7decd
+          height 140px
+        .avatar
+          width 160px
+          height 160px
+          -webkit-transform: translate(50%, -50%)
+          border-radius 90px
+          overflow hidden
+          box-shadow 0 0 0 6px #e7decd
+          position relative
+          img
+            display block
+
+  body
+    #stage
+      .profile
+        .top
+        .avatar
+          img(src='img/avatar.jpg', alt='avatar')
+        p.name Sara Robertson
+        p.title Graphic Designer
+        a.button follow
+        .status
+          .followers
+            span.number 383
+            | followers
+          .following
+            span.number 239
+            | following
+
+
