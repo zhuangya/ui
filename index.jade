@@ -14,30 +14,112 @@ html(lang='zh')
         border-radius 8px
         height 440px
         margin 80px auto
-        overflow hidden
+        &:after
+          position absolute
+          width 300px
+          border-radius 10px/20px
+          margin auto
+          z-index -1
+          box-shadow 0 10px 30px black
+          height 80px
+          content '\0020'
+          left 12px
+
         .top
+          border-radius 8px 8px 0 0
           background-color #e7decd
           height 140px
+          width 100%
+          box-sizing border-box
+          padding-top 16px
+          .dot
+            font-size 10px
+            line-height 0.5
+            text-align center
+            letter-spacing 4px
+            margin 0
+            padding 0
+            color #e7decd
+            text-shadow 0 1px 1px #999
         .avatar
-          width 160px
-          height 160px
-          -webkit-transform: translate(50%, -50%)
-          border-radius 90px
-          overflow hidden
-          box-shadow 0 0 0 6px #e7decd
-          position relative
+          text-align center
+          -webkit-transform translate(0, -50%)
+          margin-bottom -80px
           img
+            border-radius 100%
+            box-shadow 0 0 0 6px #e7decd
+        .info
+          font-family 'Source Sans Pro'
+          text-align center
+          text-transform uppercase
+          margin-bottom 24px
+          p
+            margin 0
+          .name
+            margin-top 9px
+            font-size 16px
+            line-height 1.75
+            color #e7decd
+          .title
+            font-size 12px
+            line-height 1.6666666666667
+            color #545c69
+        .action
+          .button
+            box-shadow 0 0 2px 0 #31353e, inset 0 1px 0 1px #d16e59
+            width 164px
+            height 40px
+            background-color #c44b30
             display block
-
+            margin auto
+            vertical-align middle
+            text-align center
+            font-size 10px
+            line-height 40px
+            text-transform uppercase
+            border-radius 6px
+            border 1px solid #161b1f
+            color #e6dfcd
+            cursor pointer
+            text-shadow 0 1px 1px #333
+      .status
+        position absolute
+        bottom 0
+        width 100%
+        height 56px
+        border-top 1px solid #171a1f
+        box-shadow inset 0 0 1px 0 #3e324d
+        text-transform uppercase
+        .number
+          font-size 16px
+          line-height 1.25
+          color #191e24
+        .followers,.following
+          box-sizing border-box
+          padding 16px 0
+          text-align center
+          font-size 10px
+          color #535d69
+          float left
+          height 56px
+          width 162px
+        .followers
+          width 161px
+          border-right 1px solid #171a1f
   body
     #stage
       .profile
         .top
+          p.dot ....
+          p.dot ....
+          p.dot ....
         .avatar
           img(src='img/avatar.jpg', alt='avatar')
-        p.name Sara Robertson
-        p.title Graphic Designer
-        a.button follow
+        .info
+          p.name Sara Robertson
+          p.title Graphic Designer
+        .action
+          a.button follow
         .status
           .followers
             span.number 383
